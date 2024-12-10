@@ -5,7 +5,7 @@ import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {ListeComponent} from "./liste/liste.component";
 
-import { appRoutes } from './app.routes'; // Import des routes (si ton fichier de routes s'appelle app.routes.ts)
+import { routes } from './app.routes'; // Import des routes (si ton fichier de routes s'appelle app.routes.ts)
 
 
 @Component({

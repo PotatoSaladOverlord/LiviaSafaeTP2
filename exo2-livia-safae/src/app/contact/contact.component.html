@@ -1,1 +1,11 @@
-<p>contact works!</p>
+<form>
+  <input type="text" placeholder="Prénom" [(ngModel)]="user.firstName" name="firstName">
+  <input type="text" placeholder="Nom" [(ngModel)]="user.lastName" name="lastName">
+  <input type="number" placeholder="Âge" [(ngModel)]="user.age" name="age">
+  <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" *ngIf="showEmail">
+  <input type="checkbox" [(ngModel)]="showEmail"> Afficher Email
+  <textarea placeholder="Commentaire" [(ngModel)]="user.comment" name="comment"></textarea>
+  <button type="submit">Envoyer</button>
+</form>
+
+

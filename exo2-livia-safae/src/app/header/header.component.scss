@@ -1,0 +1,26 @@
+/* Styling for the header (fixed at the top) */
+header {
+  position: fixed;         /* Make the navbar fixed at the top */
+  top: 0;                  /* Stick the navbar to the top of the screen */
+  left: 0;                 /* Make sure the navbar spans the full width */
+  width: 100%;             /* Make the navbar full width */
+  z-index: 1000;           /* Ensure it stays on top of other content */
+  background-color: #f8f9fa; /* Background color of the navbar (optional) */
+}
+
+/* Navbar content centering */
+.navbar-nav {
+  display: flex;           /* Enable flexbox */
+  justify-content: center; /* Center items horizontally */
+  flex-grow: 1;            /* Ensure it takes up full width */
+}
+
+/* Optional: Styling for navbar items */
+.navbar-nav .nav-item {
+  margin-right: 15px;      /* Adjust space between items */
+}
+
+.navbar {
+  height: 60px;            /* Set a fixed height for the navbar */
+  padding: 0;              /* Remove any extra padding */
+}

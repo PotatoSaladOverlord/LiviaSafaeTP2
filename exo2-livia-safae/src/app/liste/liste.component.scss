@@ -1,3 +1,8 @@
+/* Add a top margin to push content below the fixed navbar */
+body {
+  margin-top: 60px;  /* This should match the height of the navbar */
+}
+
 .film_list_title {
   display: flex; /* Allows centering */
   flex-direction: column; /* Stacks items vertically */
@@ -7,7 +12,6 @@
 .film_list {
   list-style-type: none; /* Removes bullet points */
   padding: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
   display: flex; /* Allows centering */
   flex-direction: column; /* Stacks items vertically */
   align-items: center; /* Centers items horizontally */

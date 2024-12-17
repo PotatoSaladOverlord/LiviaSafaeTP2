@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-film1',
   standalone: true,
-  imports: [],
+    imports: [
+        NgOptimizedImage
+    ],
   templateUrl: './film1.component.html',
   styleUrl: './film1.component.scss'
 })

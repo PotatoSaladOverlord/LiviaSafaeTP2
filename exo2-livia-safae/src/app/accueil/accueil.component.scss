@@ -1,12 +1,12 @@
 .meme-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: center;  /* Horizontally center the content */
+  align-items: center;      /* Vertically center the content */
+  height: 100vh;            /* Use the full height of the viewport */
 }
 
 .meme-container img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
+  max-width: 90%;  /* Prevent the image from getting too large */
+  max-height: 90%; /* Prevent the image from getting too large */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
 }

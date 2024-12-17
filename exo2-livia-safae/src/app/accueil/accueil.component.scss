@@ -6,7 +6,7 @@
 }
 
 .meme-container img {
-  max-width: 90%;  /* Prevent the image from getting too large */
-  max-height: 90%; /* Prevent the image from getting too large */
+  max-width: 80%;  /* Prevent the image from getting too large */
+  max-height: 80%; /* Prevent the image from getting too large */
   object-fit: contain; /* Ensure the image maintains its aspect ratio */
 }

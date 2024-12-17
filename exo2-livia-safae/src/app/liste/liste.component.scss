@@ -1,0 +1,24 @@
+.film_list_title {
+  display: flex; /* Allows centering */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers items horizontally */
+}
+
+.film_list {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  display: flex; /* Allows centering */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers items horizontally */
+}
+
+.film_list a {
+  text-decoration: none; /* Removes underline from links */
+  color: #007bff; /* Optional: Adds a color to links */
+  font-size: 18px; /* Optional: Adjust font size */
+}
+
+.film_list a:hover {
+  text-decoration: underline; /* Optional: Underline on hover */
+}

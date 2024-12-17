@@ -1,0 +1,12 @@
+.meme-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.meme-container img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}

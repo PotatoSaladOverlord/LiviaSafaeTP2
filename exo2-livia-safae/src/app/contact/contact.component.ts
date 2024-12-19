@@ -7,9 +7,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     FormsModule,
-    CommonModule],
+    CommonModule
+  ],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
   user = {
@@ -19,6 +20,5 @@ export class ContactComponent {
     age: null,
     comment: ''
   };
-  showEmail = false;  // Pour contrôler l'affichage du champ email
+  hideEmail = false; // Contrôle si le champ e-mail est masqué
 }
-

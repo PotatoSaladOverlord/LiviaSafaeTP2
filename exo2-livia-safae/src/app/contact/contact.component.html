@@ -1,12 +1,14 @@
 <body>
-<form>
-  <input type="text" placeholder="Prénom" [(ngModel)]="user.firstName" name="firstName">
-  <input type="text" placeholder="Nom" [(ngModel)]="user.lastName" name="lastName">
-  <input type="number" placeholder="Âge" [(ngModel)]="user.age" name="age">
-  <input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" *ngIf="showEmail">
-  <input type="checkbox" [(ngModel)]="showEmail"> Afficher Email
-  <textarea placeholder="Commentaire" [(ngModel)]="user.comment" name="comment"></textarea>
-  <button type="submit">Envoyer</button>
+<form #contactForm="ngForm" novalidate> <!-- Ajout de ngForm pour la gestion du formulaire -->
+  <input type="text" placeholder="Prénom" [(ngModel)]="user.firstName" name="firstName" required>
+  <input type="text" placeholder="Nom" [(ngModel)]="user.lastName" name="lastName" required>
+  <input type="number" placeholder="Âge" [(ngModel)]="user.age" name="age" required>
+  <input type="email" placeholder="E-mail" [(ngModel)]="user.email" name="email" *ngIf="!hideEmail" required>
+  <label> <!-- Ajout d'un label pour améliorer l'accessibilité -->
+    <input type="checkbox" [(ngModel)]="hideEmail">
+    Masquer l'E-mail
+  </label>
+  <textarea placeholder="Commentaire" [(ngModel)]="user.comment" name="comment" required></textarea>
+  <button type="submit" [disabled]="!contactForm.valid">Envoyer</button> <!-- Bouton désactivé si le formulaire n'est pas valide -->
 </form>
 </body>
-

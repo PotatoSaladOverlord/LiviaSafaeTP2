@@ -1,47 +1,20 @@
-/* Styles globaux pour tous les formulaires */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px; /* Limite la largeur du formulaire */
-    margin: 20px auto; /* Centrage du formulaire */
-    padding: 20px;
-    border: 1px solid #ccc; /* Bordure pour le formulaire */
-    border-radius: 8px; /* Bords arrondis */
-    background: #f9f9f9; /* Couleur de fond du formulaire */
-    box-sizing: border-box; /* Inclut padding et bordure dans la largeur */
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%; /* Assure que les champs prennent la pleine largeur */
-    box-sizing: border-box; /* Important pour inclure padding et bordure */
-}
-
-button {
-    padding: 10px 20px;
-    color: white;
-    background-color: #007bff; /* Bleu, mais peut être ajusté */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3; /* Changement de couleur au survol */
-}
-
-label {
-    display: block; /* Rend le label un bloc pour une meilleure gestion de l'espace */
-    margin: 10px 0; /* Ajoute un peu d'espace autour du label */
-}
-
-input[type="checkbox"] {
-    margin-right: 5px; /* Espace avant le label de la checkbox */
+input, textarea, button {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
 }

@@ -1,14 +1,31 @@
 <body>
-<form #contactForm="ngForm" novalidate> <!-- Ajout de ngForm pour la gestion du formulaire -->
-  <input type="text" placeholder="Prénom" [(ngModel)]="user.firstName" name="firstName" required>
-  <input type="text" placeholder="Nom" [(ngModel)]="user.lastName" name="lastName" required>
-  <input type="number" placeholder="Âge" [(ngModel)]="user.age" name="age" required>
-  <input type="email" placeholder="E-mail" [(ngModel)]="user.email" name="email" *ngIf="!hideEmail" required>
-  <label> <!-- Ajout d'un label pour améliorer l'accessibilité -->
-    <input type="checkbox" [(ngModel)]="hideEmail">
-    Masquer l'E-mail
-  </label>
-  <textarea placeholder="Commentaire" [(ngModel)]="user.comment" name="comment" required></textarea>
-  <button type="submit" [disabled]="!contactForm.valid">Envoyer</button> <!-- Bouton désactivé si le formulaire n'est pas valide -->
-</form>
+<div class="contact-container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="prenom">*Prénom:</label>
+      <input id="prenom" formControlName="prenom" type="text" required />
+    </div>
+    <div>
+      <label for="nom">*Nom:</label>
+      <input id="nom" formControlName="nom" type="text" required />
+    </div>
+    <div>
+      <label for="age">Âge:</label>
+      <input id="age" formControlName="age" type="number" />
+    </div>
+    <div>
+      <label for="hide">Hide Email:</label>
+      <input id="hide" type="checkbox" (change)="toggleEmail($event)" />
+    </div>
+    <div *ngIf="!emailHidden">
+      <label for="email">*Email:</label>
+      <input id="email" formControlName="email" type="email" required />
+    </div>
+    <div>
+      <label for="commentaire">*Commentaire:</label>
+      <textarea id="commentaire" formControlName="commentaire" required></textarea>
+    </div>
+    <button type="submit" [disabled]="!contactForm.valid">Envoyer</button>
+  </form>
+</div>
 </body>

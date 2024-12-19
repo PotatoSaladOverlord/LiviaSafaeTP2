@@ -1,3 +1,13 @@
-<body>
-<p>gestion works!</p>
-</body>
+<div class="gestion-container">
+  <ng-container *ngIf="lastContactForm; else notFound">
+    <h3>Dernier formulaire envoyé :</h3>
+    <p><strong>Prénom:</strong> {{ lastContactForm.prenom }}</p>
+    <p><strong>Nom:</strong> {{ lastContactForm.nom }}</p>
+    <p><strong>Âge:</strong> {{ lastContactForm.age || 'Non fourni' }}</p>
+    <p><strong>Email:</strong> {{ lastContactForm.email || 'Non fourni' }}</p>
+    <p><strong>Commentaire:</strong> {{ lastContactForm.commentaire }}</p>
+  </ng-container>
+  <ng-template #notFound>
+    <h3>404 Not Found</h3>
+  </ng-template>
+</div>

@@ -17,7 +17,7 @@ export class ContactComponent {
   contactForm: FormGroup;
   emailHidden = false;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  public constructor(private fb: FormBuilder, private router: Router) {
     this.contactForm = this.fb.group({
       prenom: ['', Validators.required],
       nom: ['', Validators.required],
@@ -27,7 +27,7 @@ export class ContactComponent {
     });
   }
 
-  toggleEmail(event: Event): void {
+  public toggleEmail(event: Event): void {
     this.emailHidden = (event.target as HTMLInputElement).checked;
     if (this.emailHidden) {
       this.contactForm.get('email')?.clearValidators();
@@ -37,7 +37,7 @@ export class ContactComponent {
     this.contactForm.get('email')?.updateValueAndValidity();
   }
 
-  onSubmit(): void {
+  public onSubmit(): void {
     if (this.contactForm.valid) {
       alert('Le formulaire est valide');
       localStorage.setItem('lastContactForm', JSON.stringify(this.contactForm.value));

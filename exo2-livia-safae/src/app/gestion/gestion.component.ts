@@ -13,7 +13,7 @@ import {NgIf} from "@angular/common";
 export class GestionComponent implements OnInit {
   lastContactForm: any;
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     const storedForm = localStorage.getItem('lastContactForm');
     this.lastContactForm = storedForm ? JSON.parse(storedForm) : null;
   }
